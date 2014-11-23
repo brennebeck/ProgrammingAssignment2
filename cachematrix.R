@@ -3,7 +3,6 @@
 
 ## object (i.e. class in other langs) to get/set the inverse of a matrix
 makeCacheMatrix <- function(x = matrix()) {
-
   inv <- NULL
   set <- function(y) {
     x <<- y
