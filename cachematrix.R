@@ -1,10 +1,20 @@
-## Put comments here that give an overall description of what your
-## functions do
+## @author: brennebeck
+## @note: no error checking per assumption of square matrices
 
-## Write a short comment describing this function
-
+## object (i.e. class in other langs) to get/set the inverse of a matrix
 makeCacheMatrix <- function(x = matrix()) {
 
+  inv <- NULL
+  set <- function(y) {
+    x <<- y
+    inv <<- NULL
+  }
+  get <- function() x
+  setInverse <- function(x) inv <<- solve(x)
+  getInverse <- function() inv
+  list(set = set, get = get,
+       setInverse = setInverse,
+       getInverse = getInverse)
 }
 
 
